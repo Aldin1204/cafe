@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meny Kafe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <style>
+        /* 🎨 Ngjyrat kryesore */
+        :root {
+            --green-dark: #1b5e20;  /* Jeshile e mbyllur (për header-in dhe emrat e kafesë) */
+            --green-light: #d8f5d8; /* Jeshile e hapur (për sfondin e faqes poshtë) */
+            --text-dark: #222222;
+            --card-white: #ffffff;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            background-color: var(--green-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header me jeshile të mbyllur */
+        header {
+            background-color: var(--green-dark);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Mesazhi i mirëseardhjes */
+        .welcome {
+            text-align: center;
+            background-color: var(--card-white);
+            margin: 15px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .welcome h2 {
+            color: var(--green-dark);
+            margin-bottom: 10px;
+        }
+
+        .menu-container {
+            padding: 10px;
+        }
+
+        /* Titulli për seksionin e kafesë */
+        .section-title {
+            text-align: center;
+            color: var(--green-dark);
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #1b5e20, #4caf50);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Kutia për secilën kafe */
+        .menu-item {
+            background-color: var(--card-white);
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+
+        .item-info {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: white;
+            background-color: var(--green-dark);
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .item-price {
+            font-weight: bold;
+            color: var(--green-dark);
+            font-size: 17px;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            color: #333;
+            padding: 15px;
+            font-size: 14px;
+        }
+
+        /* Për telefon */
+        @media screen and (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu-item img {
+                margin-bottom: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>MOA Cafe ☕</h1>
+    </header>
+
+    <div class="welcome">
+        <h2>Mirë se erdhët! | Welcome! | Добредојдовте!</h2>
+        <p>Ju faleminderit që vizituat kafenenë tonë. Zgjidhni pijen tuaj të preferuar më poshtë.</p>
+        <p>Ви благодариме што не посетивте. Изберете го вашиот омилен пијалак подолу.</p>
+        <p>Thank you for visiting our coffee shop. Please choose your favorite drink below.</p>
+    </div>
+
+    <div class="menu-container">
+        <h3 class="section-title">☕ Coffee Menu ☕</h3>
+
+        <div class="menu-item">
+            <img src="images/ess.png" alt="Espresso">
+            <div class="item-info">
+                <div class="item-name">Espresso</div>
+                <div class="item-price">90 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/doubless.png" alt="Double Espresso">
+            <div class="item-info">
+                <div class="item-name">Double Espresso</div>
+                <div class="item-price">150 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/macc.png" alt="Machiato">
+            <div class="item-info">
+                <div class="item-name">Machiato</div>
+                <div class="item-price">110 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/latte.png" alt="Latte Machiato">
+            <div class="item-info">
+                <div class="item-name">Latte Machiato</div>
+                <div class="item-price">140 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/ness.png" alt="Nescafe">
+            <div class="item-info">
+                <div class="item-name">Nescafe</div>
+                <div class="item-price">130 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/capp.png" alt="Capuchino">
+            <div class="item-info">
+                <div class="item-name">Capuchino</div>
+                <div class="item-price">130 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/freddo ess.png" alt="Freddo Espresso">
+            <div class="item-info">
+                <div class="item-name">Freddo Espresso</div>
+                <div class="item-price">160 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/freddocapp.png" alt="Freddo Capuchino">
+            <div class="item-info">
+                <div class="item-name">Freddo Capuchino</div>
+                <div class="item-price">180 MKD</div>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <img src="images/turkish.jpg" alt="Turkish Coffee">
+            <div class="item-info">
+                <div class="item-name">Turkish Coffee</div>
+                <div class="item-price">100 MKD</div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Kafeneja Juaj • Të gjitha të drejtat e rezervuara</p>
+    </footer>
+
+</body>
+</html>
